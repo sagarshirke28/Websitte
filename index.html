@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+</head>
+
+<body id="spandanscada">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-dark">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div><img src="assets/img/download.png"></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav nav-pills nav-justified" role="tablist">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#tab-1" role="tab" data-bs-toggle="pill"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 12px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9V13.1707C9.83481 13.5825 9 14.6938 9 16C9 17.6569 10.3431 19 12 19C13.6569 19 15 17.6569 15 16C15 14.6938 14.1652 13.5825 13 13.1707V9H11ZM11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z" fill="currentColor"></path>
+                                <path d="M12 5C15.866 5 19 8.13401 19 12V13H17V12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12V13H5V12C5 8.13401 8.13401 5 12 5Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="currentColor"></path>
+                            </svg><span>Live Display</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tab-2" role="tab" data-bs-toggle="pill"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 12px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9V13.1707C9.83481 13.5825 9 14.6938 9 16C9 17.6569 10.3431 19 12 19C13.6569 19 15 17.6569 15 16C15 14.6938 14.1652 13.5825 13 13.1707V9H11ZM11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z" fill="currentColor"></path>
+                                <path d="M12 5C15.866 5 19 8.13401 19 12V13H17V12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12V13H5V12C5 8.13401 8.13401 5 12 5Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="currentColor"></path>
+                            </svg><span>Mimic Display</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tab-3" role="tab" data-bs-toggle="pill"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 12px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9V13.1707C9.83481 13.5825 9 14.6938 9 16C9 17.6569 10.3431 19 12 19C13.6569 19 15 17.6569 15 16C15 14.6938 14.1652 13.5825 13 13.1707V9H11ZM11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z" fill="currentColor"></path>
+                                <path d="M12 5C15.866 5 19 8.13401 19 12V13H17V12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12V13H5V12C5 8.13401 8.13401 5 12 5Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="currentColor"></path>
+                            </svg><span>Report Generation</span></a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link" href="#tab-4" role="tab" data-bs-toggle="pill"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 12px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9V13.1707C9.83481 13.5825 9 14.6938 9 16C9 17.6569 10.3431 19 12 19C13.6569 19 15 17.6569 15 16C15 14.6938 14.1652 13.5825 13 13.1707V9H11ZM11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z" fill="currentColor"></path>
+                                <path d="M12 5C15.866 5 19 8.13401 19 12V13H17V12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12V13H5V12C5 8.13401 8.13401 5 12 5Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="currentColor"></path>
+                            </svg><span><button widget="logoutButton" buttonname="logout" onclick="logout()" style="background-color: transparent; border: none; color: white;">Logout</button></span></a>
+					</li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>				
+            </div>
+			<div style="color: white; transform: translateX(5px) translateY(650px);position: absolute;">	
+				<div style=" height: 80px; width: 150px; color: white; background-color: white;">
+									
+									<div id="a" class="custom-div11">
+											<div widget="ChartIndicator" name="graph1" dataset="graph1" label="logTime" parameters="a" plotnames="logTime:x:pumpstatus3d1:y" refreshtime="50000" charttype="line"  xparameter="x" yparameters="flot1,flot2,flot3,flot4" scaleinfo="x:linear:bottom,y:linear:left" showanimation="true" showlegends="true" showtooltip="true" ></div>
+									</div>
+									<div style="width: 100%;height: 50px; background-color: #3e64d3; transform: translateX(0px) translateY(-76px); display:flex; flex-direction:column; justify-content:end;"><h6 style="color: white;">last Update:</h6></div>
+								
+								
+				</div>
+			</div>								
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-expand bg-white shadow mb-4 topbar static-top navbar-light">
+                    <div class="container-fluid">
+                        <div class="sidebar-brand-text mx-3"><span style="font-size: 36px;font-weight: bold;color: var(--bs-primary);">&nbsp;Nagpur Junction&nbsp;</span></div>
+                    </div>
+                </nav>
+                <div class="tab-content">
+                    <div class="container-fluid tab-pane active" id="tab-1" role="tabpanel">
+                        <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                            <h3 class="text-dark mb-0">Live Display</h3>	
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0">Section 1</h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Set Pressure D1</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus1d1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Pressure D1</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus2d1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 1 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus3d1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 2 Status</strong>&nbsp;</h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus4d1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 3 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus5d1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Auto/Manual</strong>&nbsp;</h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus6d1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0">Section 2</h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Set Pressure D2</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus1d2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Pressure D2</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus2d2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 1 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus3d2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 2 Status&nbsp;</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus4d2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 3 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus5d2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Auto/Manual</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus6d2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0">Section 3</h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Set Pressure D3</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus1d3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Pressure D3</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus2d3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 1 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus3d3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 2 Status&nbsp;</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus4d3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Pump 3 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus5d3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Auto/Manual</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_pumpstatus6d3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0">Section 4</h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 1 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 2 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 3 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 4 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve4"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 5 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve5"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 6 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve6"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 7 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve7"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Valve 8 Status</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_valve8"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0">Section 5</h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Voltage 1</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_panel1meterV"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Current 1</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_panel1meterC"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Voltage 2</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_panel2meterV"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Current 2</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_panel2meterC"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Voltage 3</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_panel3meterV"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Current 3</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_panel3meterC"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0">Section 4</h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 1</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 1</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow1"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 2</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 2</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow2"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 3</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 3</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow3"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 4</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter4"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 4</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow4"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 5</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter5"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 5</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow5"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 6</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter6"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 6</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow6"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 7</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter7"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 7</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow7"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Actual Flowrate 8</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_flowmeter8"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Total Flow 8</strong></h6>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div widget="digitalindicator" tag="log_totalflow8"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid tab-pane" id="tab-2" role="tabpanel">
+                        <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                            <h3 class="text-dark mb-0">Mimic Display</h3>
+                        </div>
+                        <div style="width: auto;height: auto;">
+                            <div style="background: #27262e;transform: translateX(0px);margin: 0px;width: auto;height: auto;"><img src="assets/img/v1.png" style="text-align: center;transform: translate(250px) translateX(-128px) translateZ(-1px);"></div>
+                           <div style="width: 60px;height: 90px;transform: translateX(311px) translateY(-1053px);position: absolute;" widget="imageindicator" tag="log_pumpstatus5d3" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-944px);position: absolute;" widget="imageindicator" tag="log_pumpstatus4d3" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-834px);position: absolute;" widget="imageindicator" tag="log_pumpstatus3d3" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-693px);position: absolute;" widget="imageindicator" tag="log_pumpstatus5d2" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-589px);position: absolute;" widget="imageindicator" tag="log_pumpstatus4d2" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-487px);position: absolute;" widget="imageindicator" tag="log_pumpstatus3d2" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-359px);position: absolute;" widget="imageindicator" tag="log_pumpstatus5d1" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-255px);position: absolute;" widget="imageindicator" tag="log_pumpstatus4d1" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+							<div style="width: 60px;height: 90px;transform: translateX(312px) translateY(-153px);position: absolute;" widget="imageindicator" tag="log_pumpstatus3d1" images="redpump.png,greypump.png,greenpump.png,redpump.png"></div>
+                            <div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-1024px);position: absolute;" widget="imageindicator" tag="log_valve1" images="greyvalve.png,greenvalve.png"></div>
+                            <div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-947px);position: absolute;" widget="imageindicator" tag="log_valve2" images="greyvalve.png,greenvalve.png"></div>
+							<div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-874px);position: absolute;" widget="imageindicator" tag="log_valve3" images="greyvalve.png,greenvalve.png"></div>
+                            <div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-796px);position: absolute;" widget="imageindicator" tag="log_valve4" images="greyvalve.png,greenvalve.png"></div>
+                            <div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-695px);position: absolute;" widget="imageindicator" tag="log_valve5" images="greyvalve.png,greenvalve.png"></div>
+                            <div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-623px);position: absolute;" widget="imageindicator" tag="log_valve6" images="greyvalve.png,greenvalve.png"></div>
+                            <div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-545px);position: absolute;" widget="imageindicator" tag="log_valve7" images="greyvalve.png,greenvalve.png"></div>
+                            <div style="width: 45px;height: 50px;transform: translateX(674px) translateY(-474px);position: absolute;" widget="imageindicator" tag="log_valve8" images="greyvalve.png,greenvalve.png"></div>
+                            <div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-1033px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+								<div widget="digitalindicator" tag="log_flowmeter1" style="text-align: center;color: rgb(255,255,255);"></div>
+							</div>
+							<div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-955px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+								<div widget="digitalindicator" tag="log_flowmeter2" style="text-align: center;color: rgb(255,255,255);"></div>
+							</div>
+							<div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-885px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+                                <div widget="digitalindicator" tag="log_flowmeter6" style="text-align: center;color: rgb(255,255,255);"></div>
+                            </div>
+                            <div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-805px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+                                <div widget="digitalindicator" tag="log_flowmeter8" style="text-align: center;color: rgb(255,255,255);"></div>
+                            </div>
+                            <div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-705px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+                                <div widget="digitalindicator" tag="log_flowmeter7" style="text-align: center;color: rgb(255,255,255);"></div>
+                            </div>
+                            <div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-631px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+                                <div widget="digitalindicator" tag="log_flowmeter5" style="text-align: center;color: rgb(255,255,255);"></div>
+                            </div>
+                            <div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-555px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+                                <div widget="digitalindicator" tag="log_flowmeter4" style="text-align: center;color: rgb(255,255,255);"></div>
+                            </div>
+                            <div style="width: 55px;height: 27px;transform: translateX(775px) translateY(-484px);position: absolute;background: #2c2a2a;border-radius: 7px;text-align: center;border: 4px solid rgb(255,255,255);color: rgb(255,255,255);font-size: 13px;">
+                                <div widget="digitalindicator" tag="log_flowmeter3" style="text-align: center;color: rgb(255,255,255);"></div>
+                            </div>
+                            <div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-998px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Platform 1</span><input type="text" id="log_train1" style="width: 145px;padding: 0px 0px;" ></div>
+                            <div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-923px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Platform 2&nbsp;</span><input type="text" id="log_train2" style="width: 145px;padding: 0px 0px;" ></div>
+                            <div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-850px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Platform 8</span><input type="text" id="log_train8" style="width: 145px;padding: 0px 0px;" ></div>
+							<div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-775px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Spare 1</span><input type="text" id="log_train4" style="width: 145px;padding: 0px 0px;" ></div>
+                            <div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-667px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Spare 2&nbsp;</span><input type="text" id="log_train6" style="width: 125px;padding: 0px 0px;" ></div>
+                            <div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-595px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Platform 7&nbsp;</span><input type="text" id="log_train7" style="width: 125px;padding: 0px 0px;" ></div>
+                            <div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-520px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Platform 5&6&nbsp;</span><input type="text" id="log_train5" style="width: 125px;padding: 0px 0px;" ></div>
+                            <div style="width: 240px;height: 30px;transform: translateX(874px) translateY(-447px);position: absolute;background: #ffffff;border-radius: 7px;text-align: left;color: rgb(0,0,0);font-size: 13px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);"><span style="padding: 5px;">Platform 3&4</span><input type="text" id="log_train3" style="width: 125px;padding: 0px 0px;" ></div>
+                            <div style="width: auto;height: auto;transform: translateX(1122px) translateY(-1000px);position: absolute;background: #ffffff;border-radius: 20px;text-align: left;color: rgb(0,0,0);font-size: 10px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);">
+                                <h4 style="text-align: center;font-size: 20px;">Energy Meter 1</h4>
+                                <div class="container" style="transform: translateY(15px);padding: 0px 12px;margin: 10px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-center">Voltage</h5>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center;">
+                                            <h5 style="text-align: center;" widget="digitalindicator" tag="log_panel1meterV">00</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-center">Current</h5>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center;">
+                                            <h5 style="text-align: center;" widget="digitalindicator" tag="log_panel1meterC">00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: auto;height: auto;transform: translateX(1122px) translateY(-810px);position: absolute;background: #ffffff;border-radius: 20px;text-align: left;color: rgb(0,0,0);font-size: 10px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);">
+                                <h4 style="text-align: center;font-size: 20px;">Energy Meter 2</h4>
+                                <div class="container" style="transform: translateY(15px);margin: 10px;padding: 0px 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-center">Voltage</h5>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center;">
+                                            <h5 style="text-align: center;" widget="digitalindicator" tag="log_panel2meterV">00</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-center">Current</h5>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center;">
+                                            <h5 style="text-align: center;" widget="digitalindicator" tag="log_panel2meterC">00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div style="width: auto;height: auto;transform: translateX(1122px) translateY(-620px);position: absolute;background: #ffffff;border-radius: 20px;text-align: left;color: rgb(0,0,0);font-size: 10px;margin: 0px;padding: 6px;font-weight: bold;border-width: 0px;border-color: rgb(255,255,255);">
+                                <h4 style="text-align: center;font-size: 20px;">Energy Meter 3</h4>
+                                <div class="container" style="transform: translateY(15px);padding: 0px 12px;margin: 10px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-center">Voltage</h5>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center;">
+                                            <h5 style="text-align: center;" widget="digitalindicator" tag="log_panel3meterV">00</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5 class="text-center">Current</h5>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center;">
+                                            <h5 style="text-align: center;" widget="digitalindicator" tag="log_panel3meterC">00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid tab-pane" id="tab-3" role="tabpanel">
+                        <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                            <h3 class="text-dark mb-0">Report Generation</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0">Common Parameters</h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Start Date:</strong></h6>
+                                                </div>
+                                                <div class="col-auto"><input id="startdate" type="date"></div>
+												<div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Start Time:</strong></h6>
+                                                </div>
+												<div class="col-auto"><input id="starttime" type="text" placeholder="Enter one empty space" value=" "></div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>End Date:</strong></h6>
+                                                </div>
+                                                <div class="col-auto"><input id="enddate" type="date" style="height: 30px;border-radius: 3px;"></div>
+												<div class="col me-2">
+                                                    <h6 class="mb-0"><strong>End Time:</strong></h6>
+                                                </div>
+												<div class="col-auto"><input id="endtime" type="text" style="height: 30px;border-radius: 3px;"placeholder="Enter one empty space" value=" "></div>
+                                            </div>
+                                        </li>
+										<li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong><span style="color:red; line-height: 20px;" height="20px">Note:</span>This clock is in 24-hour format.<br>When entering the start and end times, please follow the format of HH:MM:SS.<br>For example, if you want to set the start time as 10:00 AM and the end time as 3:00 PM:<br>&#9679; Enter "10:00:00" in the start time column.<br>&#9679; Enter "15:00:00" in the end time column.</strong></h6>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="text-primary fw-bold m-0"><strong>PlatForm Wise Report</strong></h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col me-2">
+                                                    <h6 class="mb-0"><strong>Select PlatForm</strong></h6>
+                                                </div>
+                                                <div class="col-auto"><select id="filter2" style="height: 30px;border-radius: 3px;">
+                                                        <option value="0" selected="">Select Platform No.</option>
+                                                        <option value="Platform 1">Platform 1</option>
+                                                        <option value="Platform 2">Platform 2</option>
+                                                        <option value="Platform 34">Platform 3 &amp; 4</option>
+                                                        <option value="Platform 56">Platform 5 &amp; 6</option>
+                                                        <option value="Platform 7">Platform 7</option>
+                                                        <option value="Platform 8">Platform 8</option>
+														<option value="AllPlatform">All Platform</option>
+                                                    </select></div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item"><button class="btn btn-primary" type="button" widget="reportbutton" buttonname="Generate Report" reportname="platformreport" parameters="startdate,enddate,filter2,starttime,endtime" mode="show" style="width: 100%;"><span style="background-color: rgb(78, 115, 223);">Generate Report</span></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Dronkar Brothers 2024</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+	
+	<script src="resources/js/chartindicator.js" ></script> 
+    <script src="resources/js/tagdatamanager.js" ></script>    
+    <script src="resources/js/theme.js"></script>
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>	  
+    <script src="resources/js/chart.min.js"></script>
+    <script src="resources/js/gauge.min.js"></script>
+    <script src="resources/js/vue.min.js"></script>
+	
+    <script src="resources/js/main.js" type = 'module'></script>
+	<script>
+				const paramNames = ['log_train1','log_train2','log_train8','log_train4','log_train6','log_train7','log_train5','log_train3'];
+				const reqObj = { reqType: 'datawriter' };
+
+				function sendData() {
+					// Send data
+					paramNames.forEach((paramName) => {
+						const val = document.getElementById(paramName).value;
+						if (val.length >= 5) { // Check if input length is at least 5
+							reqObj[paramName] = val;
+							// Refresh the field if data length is 5 or greater
+							document.getElementById(paramName).value = val;
+							// Clear the field after 1 minute
+							setTimeout(() => {
+								document.getElementById(paramName).value = '';
+							}, 20 * 60 * 1000);
+						} else {
+							reqObj[paramName] = ''; // Set empty string if input length is less than 5
+						}
+					});
+
+					fetch('log', {
+						method: 'POST',
+						headers: {
+							'Content-type': 'application/json; charset=UTF-8'
+						},
+						body: JSON.stringify(reqObj),
+						cache: 'no-store'
+					});
+					
+					setTimeout(sendData, 1000);
+}
+
+// Start sending data immediately
+sendData();
+
+
+		
+
+	</script>
+	
+</body>
+
+</html>
